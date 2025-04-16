@@ -190,7 +190,14 @@ fi
 echo "Installation complete! Please log out and log back in for changes to take effect."
 echo "If you want to apply changes without logging out, run: exec zsh"
 \E[01;31m'
-export LESS_TERMCAP_me=
+# Add colors to man pages
+export LESS_TERMCAP_mb=$'\e[01;31m'    # begin blinking
+export LESS_TERMCAP_md=$'\e[01;31m'    # begin bold
+export LESS_TERMCAP_me=$'\e[0m'        # end mode
+export LESS_TERMCAP_se=$'\e[0m'        # end standout-mode
+export LESS_TERMCAP_so=$'\e[01;44;33m' # begin standout-mode
+export LESS_TERMCAP_ue=$'\e[0m'        # end underline
+export LESS_TERMCAP_us=$'\e[01;32m'    # begin underline
 EOL
 
 # Make Zsh the default shell
